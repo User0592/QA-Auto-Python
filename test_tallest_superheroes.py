@@ -18,7 +18,7 @@ def filter_heroes(heroes, gender=None, has_work=None):
     filtered = []
     for hero in heroes:
         hero_gender = hero.get('appearance', {}).get('gender', "").lower()
-        hero_work = has_real_work(hero)  # Используем новую функцию
+        hero_work = has_real_work(hero)
         height_str = hero.get('appearance', {}).get('height', [None, None])[1]
 
         if ((gender is None or hero_gender == gender.lower()) and
